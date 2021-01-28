@@ -1,0 +1,133 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'i', 'bootstrap-icons' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData bootstrap-icons
+8 silly fetchNamedPackageData bootstrap-icons
+9 silly mapToRegistry name bootstrap-icons
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/bootstrap-icons
+13 verbose request uri https://registry.npmjs.org/bootstrap-icons
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 02:03:34
+16 verbose request id 98c7126ce143433c
+17 http request GET https://registry.npmjs.org/bootstrap-icons
+18 http 200 https://registry.npmjs.org/bootstrap-icons
+19 verbose headers { date: 'Thu, 21 Jan 2021 04:03:35 GMT',
+19 verbose headers   'content-type': 'application/json',
+19 verbose headers   'transfer-encoding': 'chunked',
+19 verbose headers   connection: 'keep-alive',
+19 verbose headers   'set-cookie':
+19 verbose headers    [ '__cfduid=d36b5a570250870b7132485d2fdcf86db1611201814; expires=Sat, 20-Feb-21 04:03:34 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+19 verbose headers   'cf-ray': '614e256c4fefeeca-GRU',
+19 verbose headers   'cache-control': 'public, max-age=300',
+19 verbose headers   etag: 'W/"498a7f338425ce2dc5efcb75c9acfea3"',
+19 verbose headers   'last-modified': 'Thu, 07 Jan 2021 21:48:37 GMT',
+19 verbose headers   vary: 'accept-encoding, accept',
+19 verbose headers   'cf-cache-status': 'REVALIDATED',
+19 verbose headers   'cf-request-id': '07c4b5b7b00000eeca8ba1d000000001',
+19 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+19 verbose headers   server: 'cloudflare',
+19 verbose headers   'content-encoding': 'gzip' }
+20 silly get cb [ 200,
+20 silly get   { date: 'Thu, 21 Jan 2021 04:03:35 GMT',
+20 silly get     'content-type': 'application/json',
+20 silly get     'transfer-encoding': 'chunked',
+20 silly get     connection: 'keep-alive',
+20 silly get     'set-cookie':
+20 silly get      [ '__cfduid=d36b5a570250870b7132485d2fdcf86db1611201814; expires=Sat, 20-Feb-21 04:03:34 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+20 silly get     'cf-ray': '614e256c4fefeeca-GRU',
+20 silly get     'cache-control': 'public, max-age=300',
+20 silly get     etag: 'W/"498a7f338425ce2dc5efcb75c9acfea3"',
+20 silly get     'last-modified': 'Thu, 07 Jan 2021 21:48:37 GMT',
+20 silly get     vary: 'accept-encoding, accept',
+20 silly get     'cf-cache-status': 'REVALIDATED',
+20 silly get     'cf-request-id': '07c4b5b7b00000eeca8ba1d000000001',
+20 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+20 silly get     server: 'cloudflare',
+20 silly get     'content-encoding': 'gzip' } ]
+21 verbose get saving bootstrap-icons to /home/doug/.npm/registry.npmjs.org/bootstrap-icons/.cache.json
+22 silly install normalizeTree
+23 silly loadCurrentTree Finishing
+24 silly loadIdealTree Starting
+25 silly install loadIdealTree
+26 silly cloneCurrentTree Starting
+27 silly install cloneCurrentTreeToIdealTree
+28 silly cloneCurrentTree Finishing
+29 silly loadShrinkwrap Starting
+30 silly install loadShrinkwrap
+31 silly loadShrinkwrap Finishing
+32 silly loadAllDepsIntoIdealTree Starting
+33 silly install loadAllDepsIntoIdealTree
+34 silly resolveWithNewModule bootstrap-icons@1.3.0 checking installable status
+35 silly cache add args [ 'bootstrap-icons', null ]
+36 verbose cache add spec bootstrap-icons
+37 silly cache add parsed spec Result {
+37 silly cache add   raw: 'bootstrap-icons',
+37 silly cache add   scope: null,
+37 silly cache add   name: 'bootstrap-icons',
+37 silly cache add   rawSpec: '',
+37 silly cache add   spec: 'latest',
+37 silly cache add   type: 'tag' }
+38 silly addNamed bootstrap-icons@latest
+39 verbose addNamed "latest" is being treated as a dist-tag for bootstrap-icons
+40 info addNameTag [ 'bootstrap-icons', 'latest' ]
+41 silly mapToRegistry name bootstrap-icons
+42 silly mapToRegistry using default registry
+43 silly mapToRegistry registry https://registry.npmjs.org/
+44 silly mapToRegistry uri https://registry.npmjs.org/bootstrap-icons
+45 verbose addNameTag registry:https://registry.npmjs.org/bootstrap-icons not in flight; fetching
+46 verbose get https://registry.npmjs.org/bootstrap-icons not expired, no request
+47 silly addNameTag next cb for bootstrap-icons with tag latest
+48 silly addNamed bootstrap-icons@1.3.0
+49 verbose addNamed "1.3.0" is a plain semver version for bootstrap-icons
+50 silly mapToRegistry name bootstrap-icons
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry https://registry.npmjs.org/
+53 silly mapToRegistry uri https://registry.npmjs.org/bootstrap-icons
+54 verbose addRemoteTarball https://registry.npmjs.org/bootstrap-icons/-/bootstrap-icons-1.3.0.tgz not in flight; adding
+55 verbose addRemoteTarball [ 'https://registry.npmjs.org/bootstrap-icons/-/bootstrap-icons-1.3.0.tgz',
+55 verbose addRemoteTarball   'fb9d704622fcb30a0329695d5033d97171947d04' ]
+56 info retry fetch attempt 1 at 02:03:35
+57 info attempt registry request try #1 at 02:03:35
+58 http fetch GET https://registry.npmjs.org/bootstrap-icons/-/bootstrap-icons-1.3.0.tgz
+59 http fetch 200 https://registry.npmjs.org/bootstrap-icons/-/bootstrap-icons-1.3.0.tgz
+60 silly fetchAndShaCheck shasum fb9d704622fcb30a0329695d5033d97171947d04
+61 verbose addTmpTarball /tmp/npm-6273-4513c3a0/registry.npmjs.org/bootstrap-icons/-/bootstrap-icons-1.3.0.tgz not in flight; adding
+62 verbose addTmpTarball already have metadata; skipping unpack for bootstrap-icons@1.3.0
+63 silly cache afterAdd bootstrap-icons@1.3.0
+64 verbose afterAdd /home/doug/.npm/bootstrap-icons/1.3.0/package/package.json not in flight; writing
+65 verbose afterAdd /home/doug/.npm/bootstrap-icons/1.3.0/package/package.json written
+66 silly loadAllDepsIntoIdealTree Finishing
+67 silly idealTree:prePrune bootstrap@5.0.0-beta1
+67 silly idealTree:prePrune └── bootstrap-icons@1.3.0
+68 silly loadIdealTree Finishing
+69 silly currentTree bootstrap@5.0.0-beta1
+70 silly idealTree bootstrap@5.0.0-beta1
+70 silly idealTree └── bootstrap-icons@1.3.0
+71 silly generateActionsToTake Starting
+72 silly install generateActionsToTake
+73 verbose stack TypeError: Cannot read property 'target' of null
+73 verbose stack     at module.exports (/usr/share/npm/lib/install/filter-invalid-actions.js:24:36)
+73 verbose stack     at Array.<anonymous> (/usr/share/npm/node_modules/slide/lib/bind-actor.js:15:8)
+73 verbose stack     at LOOP (/usr/share/npm/node_modules/slide/lib/chain.js:15:14)
+73 verbose stack     at /usr/share/npm/node_modules/slide/lib/chain.js:18:7
+73 verbose stack     at Installer.computeLinked (/usr/share/npm/lib/install.js:411:41)
+73 verbose stack     at Array.<anonymous> (/usr/share/npm/node_modules/slide/lib/bind-actor.js:15:8)
+73 verbose stack     at LOOP (/usr/share/npm/node_modules/slide/lib/chain.js:15:14)
+73 verbose stack     at /usr/share/npm/node_modules/slide/lib/chain.js:18:7
+73 verbose stack     at module.exports (/usr/share/npm/lib/install/diff-trees.js:50:3)
+73 verbose stack     at Array.<anonymous> (/usr/share/npm/node_modules/slide/lib/bind-actor.js:15:8)
+74 verbose cwd /var/www/html/dashboard/bootstrap
+75 error Linux 5.4.0-62-generic
+76 error argv "/usr/bin/node" "/usr/bin/npm" "i" "bootstrap-icons"
+77 error node v8.10.0
+78 error npm  v3.5.2
+79 error Cannot read property 'target' of null
+80 error If you need help, you may report this error at:
+80 error     <https://github.com/npm/npm/issues>
+81 verbose exit [ 1, true ]

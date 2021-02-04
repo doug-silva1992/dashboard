@@ -13,6 +13,31 @@ class Dados{
         }
     }
 
+    public function formatar_data($data){
+        $dia = date("j", strtotime($data));
+
+        $meses = array(
+            "January" => "Janeiro",
+            "February" => "Fevereiro",
+            "March" => "Março",
+            "April" => "Abril",
+            "May" => "Maio",
+            "June" => "Junho",
+            "July" => "Julho",
+            "August" => "Agosto",
+            "September" => "Setembro",
+            "October" => "Outubro",
+            "November" => "Novembro",
+            "December" => "Dezembro",
+        );
+
+        $mes = $meses[date("F", strtotime($data))]; 
+
+        $ano = date("Y", strtotime($data));
+
+        return "$mes $dia, $ano";
+    }
+
     public function search($tabela, $condicao = "1=1"){
         $conn = $this->Connection();
 
@@ -40,29 +65,35 @@ class Dados{
         return $ret;
     }
 
-    public function formatar_data($data){
-        $dia = date("j", strtotime($data));
+    public function update_post($tabela, $id ,$banner, $titulo, $tipo_postagem, $resumo, $texto){
+        $data = 'CAST(\''.date("Y-m-d").'\' AS datetime)';
+        $conn = $this->Connection();
 
-        $meses = array(
-            "January" => "Janeiro",
-            "February" => "Fevereiro",
-            "March" => "Março",
-            "April" => "Abril",
-            "May" => "Maio",
-            "June" => "Junho",
-            "July" => "Julho",
-            "August" => "Agosto",
-            "September" => "Setembro",
-            "October" => "Outubro",
-            "November" => "Novembro",
-            "December" => "Dezembro",
-        );
+        $stmt = $conn->prepare("INSERT INTO $tabela (imagem, titulo, fk_tipo, resumo, texto, data) VALUES ('$banner', '$titulo', $tipo_postagem, '$resumo', '$texto', $data)");
+        $res = $stmt->execute();
 
-        $mes = $meses[date("F", strtotime($data))]; 
+        if(!$res){
+            $ret = false;
+        }else{
+            $ret = true;
+        }
 
-        $ano = date("Y", strtotime($data));
+        return $ret;
+    }
 
-        return "$mes $dia, $ano";
+    public function delete_post($tabela, $id){
+        $conn = $this->Connection();
+
+        $stmt = $conn->prepare("DELETE FROM $tabela WHERE id = $id");
+        $res = $stmt->execute();
+
+        if(!$res){
+            $ret = false;
+        }else{
+            $ret = true;
+        }
+
+        return $ret;
     }
 }
 

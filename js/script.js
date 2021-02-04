@@ -25,8 +25,6 @@ function validaFormulario(){
         ret = false;
     }
 
-    console.log(ret);
-
     return ret;
 }
 
@@ -47,5 +45,20 @@ function formulario(){
         xmlhttp.open("POST", "../src/ajax.php", true);
         xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xmlhttp.send("funcao=" + frm.funcao.value + "&titulo=" + frm.titulo.value + "&banner=" + frm.banner.value  + "&tipo_postagem=" + frm.tipo_postagem.value + "&resumo=" + frm.resumo.value + "&texto=" + frm.texto.value);
+    }
+}
+
+function deletarPost(tabela, id){
+    if(confirm("Você deseja realmente deletar esta Postagem?")){
+        let xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200) {
+                console.log("Teste");
+                alert(this.responseText);
+            }
+        };
+        xmlhttp.open("POST", "../src/ajax.php", true);
+        xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xmlhttp.send("funcao=deletar&id=" + id + "&tabela=" + tabela);
     }
 }
